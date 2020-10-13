@@ -1,0 +1,301 @@
+.container {
+  display: flow-root;
+  flex: auto;
+}
+.tablet-pattern {
+  position: absolute;
+  top: -55px;
+  z-index: -1;
+  right: 0px;
+  width: 350px;
+  @include responsive(phone) {
+    // position: absolute;
+    // top: 55px;
+    width: 50px;
+  }
+  @include responsive(tab-port) {
+    // position: absolute;
+    // top: 55px;
+    width: 150px;
+  }
+  @include responsive(tab-land) {
+    // position: absolute;
+    // top: 55px;
+    width: 250px;
+  }
+  @include responsive(big-desktop) {
+    // position: absolute;
+    // top: 55px;
+    width: 350px;
+  }
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+}
+.headTitles {
+  font-size: 12px;
+  font-family: "BeVietnam-SemiBold";
+  margin-right: 15px;
+  cursor: pointer;
+}
+.bringContainerView {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  flex-direction: row;
+  @include responsive(tab-land) {
+    flex-wrap: wrap;
+  }
+}
+.bringTextCo {
+  width: 350px;
+}
+.bringText {
+  font-size: 50px;
+  font-family: "BeVietnam-ExtraBold";
+}
+.manageSection {
+  align-items: baseline;
+}
+.manageTextCo {
+  width: 250px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.manageText {
+  color: grey;
+  font-size: 12px;
+}
+.get-Start-btn {
+  width: 130px;
+  height: 40px;
+  background-color: #f25f3a;
+  border-width: 0px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.get-Start-txt {
+  font-size: 10;
+  color: white;
+  font-weight: 600;
+}
+.illustration {
+  width: 400px;
+}
+.tipsContainer {
+  width: 450px;
+  height: 150px;
+}
+.tipsHead {
+  display: flex;
+  width: 350px;
+  flex-direction: row;
+  align-items: center;
+}
+.photo {
+  width: 450px;
+  position: absolute;
+  z-index: -1;
+  left: -200px;
+}
+.Num {
+  width: 50px;
+  height: 30px;
+  background-color: #f25f3a;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.Num-Text {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+.tipsTitle {
+  font-size: 12px;
+  font-weight: 700;
+}
+.tipsDescription {
+  width: 200px;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.description {
+  width: 200px;
+  line-break: strict;
+  font-size: 12px;
+  color: grey;
+}
+.commentsSection {
+  display: flex;
+  flex-direction: column;
+  @include responsive(tab-land) {
+    flex-wrap: wrap;
+  }
+}
+.commentsList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.commentsHeadText {
+  text-align: center;
+}
+.commentContainer {
+  width: 420px;
+  height: 150px;
+  background-color: #eee;
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  margin-top: 30px;
+  flex-direction: column;
+}
+.commentImg {
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  margin-top: -30px;
+}
+.comment {
+  display: flex;
+  width: 350px;
+  @include responsive(phone) {
+    flex-basis: 75% !important;
+  }
+}
+.commentTxt {
+  color: grey;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+.commentName {
+  font-family: "BeVietnam-SemiBold";
+  font-size: 14px;
+  margin-top: 20px;
+}
+.commentBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 160px;
+}
+.simplifySection {
+  background-color: #f25f3a;
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+.simplifyBtn {
+  background-color: white;
+}
+.simplifyBtnLabel {
+  color: #f25f3a;
+}
+.simplifyTxt {
+  color: white;
+  font-size: 40px;
+  width: 400px;
+  font-weight: 700;
+  font-family: "BeVietnam-ExtraBold";
+}
+.simplifyPhoto {
+  width: 200px;
+  position: absolute;
+  opacity: 0.1;
+  left: 190px;
+  height: 180px;
+}
+.footerSection {
+  background-color: #1d1e25;
+  height: 250px;
+  display: flex;
+  padding-right: 80px;
+  padding-left: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+.socialContainer {
+  margin-top: 80px;
+}
+.socialIcon {
+  margin-right: 10px;
+}
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  justify-content: space-between;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+.linkTxt {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-family: "BeVietnam-ExtraBold";
+}
+.input {
+  width: 200px;
+  border-radius: 20px;
+  height: 30px;
+  border-width: 0px;
+  padding-left: 20px;
+  font-size: 10px;
+  color: grey;
+  box-shadow: none !important;
+}
+.goBtn {
+  border-radius: 20px;
+  height: 25px;
+  background-color: #f25f3a;
+  border-width: 0px;
+  width: 45px;
+  margin-left: 10px;
+}
+.goBtnLabel {
+  color: white;
+}
+.inputRow {
+  display: flex;
+  flex-direction: row;
+}
+.inputContainer {
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.errorMsgContainer {
+  width: 200px;
+  display: flex;
+  margin-right: 40px;
+  justify-content: center;
+}
+.errorMsg {
+  font-size: 12px;
+  color: red;
+  text-align: center;
+}
+.copyright {
+  color: grey;
+  font-size: 10px;
+  font-family: "BeVietnam-ExtraBold";
+  margin-top: 30px;
+}
