@@ -328,6 +328,8 @@
   display: flex;
   margin-right: 40px;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 .errorMsg {
   font-size: 12px;
@@ -434,24 +436,31 @@
     cursor: pointer;
   }
   .simplifySection {
-    height: 350px;
+    height: 300px;
     flex-wrap: wrap;
-    display: grid;
+    display: flex;
     justify-content: center;
+    padding-right: 0px;
+    padding-left: 0px;
   }
   .simplifyTxt {
-    width: 290px;
+    width: 320px;
     text-align: center;
     font-family: "BoldFont";
+    margin-top: 25px;
   }
   .simplifyPhoto {
     width: 300px;
     left: -90px;
     height: 200px;
   }
+  .simplifyBtn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
   .footerSection {
     width: 100%;
-    height: 400px;
+    height: 480px;
     flex-wrap: wrap-reverse;
     padding-right: 20px;
     padding-left: 20px;
@@ -459,7 +468,7 @@
     justify-content: center;
   }
   .inputContainer {
-    height: 60px;
+    height: 80px;
     width: 280px;
     flex-direction: row;
   }
@@ -479,6 +488,7 @@
     margin-top: 50px;
     align-self: center;
     margin-left: 40px;
+    margin-bottom: 30px;
   }
   .inputContent {
     display: flex;
@@ -502,5 +512,13 @@
     display: flex;
     align-items: center;
     margin-right: 0px;
+  }
+  .commentsSection {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .commentContainer {
+    margin-bottom: 15px;
   }
 }
