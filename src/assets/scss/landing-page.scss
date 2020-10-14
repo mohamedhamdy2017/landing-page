@@ -129,6 +129,7 @@
   font-weight: 600;
   font-size: 14px;
   font-family: "BoldFont";
+  margin-bottom: 0px;
 }
 .tipsTitle {
   font-size: 12px;
@@ -436,12 +437,13 @@
     cursor: pointer;
   }
   .simplifySection {
-    height: 300px;
+    height: 280px;
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
     padding-right: 0px;
     padding-left: 0px;
+    padding-bottom: 20px;
   }
   .simplifyTxt {
     width: 320px;
@@ -486,9 +488,9 @@
   }
   .footerLogo {
     margin-top: 50px;
-    align-self: center;
-    margin-left: 40px;
+    justify-content: center;
     margin-bottom: 30px;
+    display: flex;
   }
   .inputContent {
     display: flex;
@@ -505,6 +507,7 @@
     font-family: "BoldFont";
   }
   .linksContainer {
+    display: flex;
     align-items: flex-start;
     justify-content: center;
   }

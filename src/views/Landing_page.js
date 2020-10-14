@@ -132,7 +132,7 @@ const Landing_page = () => {
 
         <Col className="commentBtn">
           <Button
-            className=" get-Start-btn "
+            className="get-Start-btn"
             onClick={() => alert("Get Started")}
           >
             <label className="get-Start-txt">Get Started</label>
