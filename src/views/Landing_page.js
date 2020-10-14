@@ -4,6 +4,7 @@ import { Button, Row, Col } from "reactstrap";
 import { ManageTips } from "../components/ManageTips";
 import { commentsList } from "./commentsData";
 import logo from "../assets/svg/logo.svg";
+import menu from "../assets/svg/icon-hamburger.svg";
 import rightPhoto from "../assets/svg/bg-tablet-pattern.svg";
 import illustration from "../assets/svg/illustration-intro.svg";
 import facebook from "../assets/svg/icon-facebook.svg";
@@ -25,28 +26,26 @@ const Landing_page = () => {
         <img src={rightPhoto} className="tablet-pattern" />
       </Col>
 
-      <Col>
-        <Row>
-          <Col className="head">
-            <Col>
-              <img src={logo} className="logo" />
-            </Col>
-            <Col>
-              <label className="headTitles">Pricing</label>
-              <label className="headTitles">Product</label>
-              <label className="headTitles">About Us</label>
-              <label className="headTitles">Carrers</label>
-              <label className="headTitles">Community</label>
-            </Col>
-            <Button className="get-Start-btn">
-              <label className="get-Start-txt">Get Started</label>
-            </Button>
+      <Row>
+        <Col md={12} className="head">
+          <Col>
+            <img src={logo} className="logo" />
           </Col>
-        </Row>
-      </Col>
-
+          <Col className="navBar">
+            <label className="headTitles">Pricing</label>
+            <label className="headTitles">Product</label>
+            <label className="headTitles">About Us</label>
+            <label className="headTitles">Carrers</label>
+            <label className="headTitles">Community</label>
+          </Col>
+          <Button className="get-Start-btn">
+            <label className="get-Start-txt">Get Started</label>
+          </Button>
+        </Col>
+        <img src={menu} className="menu" />
+      </Row>
       <Row className="bringContainerView">
-        <Col>
+        <Col className="bringContent">
           <Col className="bringTextCo">
             <label className="bringText">
               {"Bring every one together to build better products"}
@@ -59,7 +58,7 @@ const Landing_page = () => {
               }
             </label>
           </Col>
-          <Button className="get-Start-btn ">
+          <Button className="bringSectionBtn">
             <label className="get-Start-txt">Get Started</label>
           </Button>
         </Col>
@@ -67,7 +66,7 @@ const Landing_page = () => {
         <img src={illustration} className="illustration" />
       </Row>
 
-      <Row className="bringContainerView manageSection">
+      <Row className="manageSection">
         <Col>
           <Col className="bringTextCo">
             <label className="bringText">
@@ -81,7 +80,9 @@ const Landing_page = () => {
               }
             </label>
           </Col>
-          <img src={rightPhoto} className="photo" />
+          <Col className="photoContainer">
+            <img src={rightPhoto} className="photo" />
+          </Col>
         </Col>
         <Col>
           <ManageTips
@@ -115,12 +116,12 @@ const Landing_page = () => {
           {commentsList.map((comment) => {
             return (
               <Col className="commentContainer ">
-                <Col>
+                <Col className="commentImgContainer">
                   <img src={comment.image} className="commentImg" />
                 </Col>
-                <Col>
-                  <label className="commentName">{comment.name}</label>
-                </Col>
+
+                <label className="commentName">{comment.name}</label>
+
                 <Col className="comment">
                   <label className="commentTxt">{comment.comment}</label>
                 </Col>
@@ -146,14 +147,14 @@ const Landing_page = () => {
 
         <img src={rightPhoto} className="simplifyPhoto" />
 
-        <Button className="get-Start-btn simplifyBtn">
+        <Button className="simplifyBtn">
           <label className="get-Start-txt simplifyBtnLabel">Get Started</label>
         </Button>
       </Col>
 
       <Col className="footerSection">
-        <Row>
-          <Col>
+        <Col className="socialContent">
+          <Col className="footerLogo">
             <img src={logo} />
           </Col>
           <Row className="socialContainer">
@@ -163,7 +164,7 @@ const Landing_page = () => {
             <img src={pinterest} className="socialIcon" />
             <img src={instagram} className="socialIcon" />
           </Row>
-        </Row>
+        </Col>
 
         <Row className="linksContainer">
           <Col className="links">
@@ -178,8 +179,8 @@ const Landing_page = () => {
             <label className="linkTxt">Privacy policy</label>
           </Col>
         </Row>
-        <Row className="inputContainer">
-          <Col>
+        <Row className="inputContent">
+          <Col className="inputContainer">
             <input
               className="input"
               placeholder="Updates in your inbox..."
@@ -201,11 +202,10 @@ const Landing_page = () => {
               {errors.email && errors.email.message}
             </label>
           </Col>
-          <Col>
-            <label className="copyright">
-              Copyright 2020.All Rights Reserved
-            </label>
-          </Col>
+
+          <label className="copyright">
+            Copyright 2020.All Rights Reserved
+          </label>
         </Row>
       </Col>
     </Col>

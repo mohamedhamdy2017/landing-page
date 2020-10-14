@@ -1,6 +1,7 @@
 .container {
-  display: flow-root;
+  display: contents;
   flex: auto;
+  overflow-x: hidden;
 }
 .tablet-pattern {
   position: absolute;
@@ -8,26 +9,14 @@
   z-index: -1;
   right: 0px;
   width: 350px;
-  @include responsive(phone) {
-    // position: absolute;
-    // top: 55px;
-    width: 50px;
-  }
-  @include responsive(tab-port) {
-    // position: absolute;
-    // top: 55px;
-    width: 150px;
-  }
-  @include responsive(tab-land) {
-    // position: absolute;
-    // top: 55px;
-    width: 250px;
-  }
-  @include responsive(big-desktop) {
-    // position: absolute;
-    // top: 55px;
-    width: 350px;
-  }
+}
+.menu {
+  display: none;
+}
+.navBar {
+  display: flex;
+
+  margin-right: 65px;
 }
 .head {
   display: flex;
@@ -36,8 +25,8 @@
   padding: 60px;
 }
 .headTitles {
-  font-size: 12px;
-  font-family: "BeVietnam-SemiBold";
+  font-size: 14px;
+  font-family: "BoldFont";
   margin-right: 15px;
   cursor: pointer;
 }
@@ -47,19 +36,31 @@
   justify-content: space-between;
   padding: 60px;
   flex-direction: row;
-  @include responsive(tab-land) {
-    flex-wrap: wrap;
-  }
 }
 .bringTextCo {
   width: 350px;
 }
 .bringText {
   font-size: 50px;
-  font-family: "BeVietnam-ExtraBold";
+  font-family: "BoldFont";
+}
+.bringSectionBtn {
+  width: 130px;
+  height: 40px;
+  background-color: #f25f3a;
+  border-width: 0px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
 }
 .manageSection {
-  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  flex-direction: row;
+  align-items: end;
 }
 .manageTextCo {
   width: 250px;
@@ -69,6 +70,7 @@
 .manageText {
   color: grey;
   font-size: 12px;
+  font-family: "BoldFont";
 }
 .get-Start-btn {
   width: 130px;
@@ -76,12 +78,22 @@
   background-color: #f25f3a;
   border-width: 0px;
   border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   cursor: pointer;
 }
+.get-Start-btn:hover {
+  background-color: #f25f3a;
+}
 .get-Start-txt {
-  font-size: 10;
+  font-size: 12px;
   color: white;
-  font-weight: 600;
+  font-weight: 700;
+  text-align: center;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  font-family: "BoldFont";
 }
 .illustration {
   width: 400px;
@@ -103,7 +115,7 @@
   left: -200px;
 }
 .Num {
-  width: 50px;
+  max-width: 50px;
   height: 30px;
   background-color: #f25f3a;
   align-items: center;
@@ -116,10 +128,12 @@
   color: white;
   font-weight: 600;
   font-size: 14px;
+  font-family: "BoldFont";
 }
 .tipsTitle {
   font-size: 12px;
   font-weight: 700;
+  font-family: "BoldFont";
 }
 .tipsDescription {
   width: 200px;
@@ -131,13 +145,12 @@
   line-break: strict;
   font-size: 12px;
   color: grey;
+  font-family: "BoldFont";
 }
 .commentsSection {
   display: flex;
   flex-direction: column;
-  @include responsive(tab-land) {
-    flex-wrap: wrap;
-  }
+  margin-top: 180px;
 }
 .commentsList {
   display: flex;
@@ -150,40 +163,43 @@
 }
 .commentContainer {
   width: 420px;
-  height: 150px;
+  height: 180px;
   background-color: #eee;
   display: flex;
   margin-right: 10px;
-  align-items: center;
   margin-top: 30px;
   flex-direction: column;
+}
+.commentImgContainer {
+  justify-content: center;
+  display: flex;
+  height: 50px;
 }
 .commentImg {
   width: 60px;
   height: 60px;
-  justify-content: center;
   margin-top: -30px;
 }
 .comment {
   display: flex;
   width: 350px;
-  @include responsive(phone) {
-    flex-basis: 75% !important;
-  }
+  margin: auto;
 }
 .commentTxt {
   color: grey;
   font-size: 12px;
   text-align: center;
-  margin-top: 10px;
+  font-family: "BoldFont";
 }
 .commentName {
-  font-family: "BeVietnam-SemiBold";
+  justify-content: center;
+  display: flex;
+  font-family: "BoldFont";
   font-size: 14px;
-  margin-top: 20px;
 }
 .commentBtn {
   display: flex;
+  // align-items: center;
   justify-content: center;
   margin-top: 25px;
   margin-bottom: 160px;
@@ -194,11 +210,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 80px;
   padding-left: 80px;
+  padding-right: 80px;
 }
 .simplifyBtn {
-  background-color: white;
+  width: 130px;
+  height: 40px;
+  background-color: #ffffff;
+  border-width: 0px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
 }
 .simplifyBtnLabel {
   color: #f25f3a;
@@ -208,7 +232,7 @@
   font-size: 40px;
   width: 400px;
   font-weight: 700;
-  font-family: "BeVietnam-ExtraBold";
+  font-family: "BoldFont";
 }
 .simplifyPhoto {
   width: 200px;
@@ -223,11 +247,21 @@
   display: flex;
   padding-right: 80px;
   padding-left: 80px;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
   align-items: center;
+}
+.socialContent {
+  width: 200px;
+  justify-content: start;
 }
 .socialContainer {
   margin-top: 80px;
+  width: 200px;
+  margin-left: 20px;
+}
+.footerLogo {
+  width: 200px;
 }
 .socialIcon {
   margin-right: 10px;
@@ -235,7 +269,7 @@
 .linksContainer {
   display: flex;
   flex-direction: row;
-  width: 400px;
+  width: 600px;
   justify-content: space-between;
 }
 .links {
@@ -248,7 +282,7 @@
   font-size: 12px;
   margin-bottom: 15px;
   cursor: pointer;
-  font-family: "BeVietnam-ExtraBold";
+  font-family: "BoldFont";
 }
 .input {
   width: 200px;
@@ -259,28 +293,36 @@
   font-size: 10px;
   color: grey;
   box-shadow: none !important;
+  font-family: "BoldFont";
 }
 .goBtn {
   border-radius: 20px;
-  height: 25px;
   background-color: #f25f3a;
   border-width: 0px;
   width: 45px;
   margin-left: 10px;
 }
-.goBtnLabel {
-  color: white;
+.goBtn:hover {
+  background-color: #f25f3a;
 }
-.inputRow {
+.goBtnLabel {
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  margin: 0px;
+  font-family: "BoldFont";
+}
+.inputContent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
 .inputContainer {
   height: 100px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .errorMsgContainer {
   width: 200px;
@@ -292,10 +334,174 @@
   font-size: 12px;
   color: red;
   text-align: center;
+  font-family: "BoldFont";
 }
 .copyright {
   color: grey;
   font-size: 10px;
-  font-family: "BeVietnam-ExtraBold";
-  margin-top: 30px;
+  font-family: "BoldFont";
+  margin-top: 50px;
+  display: flex;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  p {
+    text-align: right;
+  }
+  .container {
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+  }
+  .logo {
+    width: 90px;
+    margin-right: 15px;
+  }
+  .tablet-pattern {
+    right: -90px;
+  }
+  .menu {
+    top: 60px;
+    position: absolute;
+    right: 25px;
+    display: flex;
+  }
+  .navBar {
+    display: none;
+  }
+  .get-Start-btn {
+    display: none;
+  }
+  .head {
+    display: flex;
+    padding-right: 15px;
+    padding-left: 15px;
+    align-items: center;
+  }
+  .bringContainerView {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .bringTextCo {
+    font-size: 35px;
+  }
+  .bringText {
+    font-size: 35px;
+    font-family: "BoldFont";
+  }
+  .manageSection {
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .illustration {
+    width: 300px;
+  }
+  .photoContainer {
+    width: 350px;
+    position: absolute;
+    z-index: -1;
+    right: -300px;
+    top: 150px;
+  }
+  .Num {
+    max-width: 50px;
+  }
+  .tipsHead {
+    background-color: pink;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .bringContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bringSectionBtn {
+    width: 130px;
+    height: 40px;
+    background-color: #f25f3a;
+    border-width: 0px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+  }
+  .simplifySection {
+    height: 350px;
+    flex-wrap: wrap;
+    display: grid;
+    justify-content: center;
+  }
+  .simplifyTxt {
+    width: 290px;
+    text-align: center;
+    font-family: "BoldFont";
+  }
+  .simplifyPhoto {
+    width: 300px;
+    left: -90px;
+    height: 200px;
+  }
+  .footerSection {
+    width: 100%;
+    height: 400px;
+    flex-wrap: wrap-reverse;
+    padding-right: 20px;
+    padding-left: 20px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .inputContainer {
+    height: 60px;
+    width: 280px;
+    flex-direction: row;
+  }
+  .input {
+    width: 160px;
+  }
+  .socialContent {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    height: max-content;
+    display: flex;
+  }
+  .socialContainer {
+    margin-top: 5px;
+  }
+  .footerLogo {
+    margin-top: 50px;
+    align-self: center;
+    margin-left: 40px;
+  }
+  .inputContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .copyright {
+    color: grey;
+    font-size: 10px;
+    position: absolute;
+    bottom: 5px;
+    font-family: "BoldFont";
+  }
+  .linksContainer {
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    margin-right: 0px;
+  }
 }
