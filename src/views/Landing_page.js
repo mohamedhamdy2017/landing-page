@@ -69,7 +69,7 @@ const Landing_page = () => {
               {"What's different about Managing?"}
             </label>
           </Col>
-          <Col className="manageTextContainer">
+          <Col className="manageTextCo">
             <label className="manageText">
               {
                 "Manage provides all functionality your tam need,without complexity.Our software is tailor-made for modern digital product teams"
