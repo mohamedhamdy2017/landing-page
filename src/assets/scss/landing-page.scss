@@ -1,6 +1,5 @@
 .container {
-  display: contents;
-  flex: auto;
+  display: contents !important;
   overflow-x: hidden;
 }
 .tablet-pattern {
@@ -56,11 +55,11 @@
   cursor: pointer;
 }
 .manageSection {
-  display: flex;
+  display: flex !important;
+  align-items: center;
   justify-content: space-between;
   padding: 60px;
   flex-direction: row;
-  align-items: end;
 }
 .manageTextCo {
   width: 250px;
@@ -99,7 +98,7 @@
   width: 400px;
 }
 .tipsContainer {
-  width: 450px;
+  width: 350px;
   height: 150px;
 }
 .tipsHead {
