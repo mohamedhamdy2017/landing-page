@@ -1,13 +1,14 @@
-.container {
-  display: contents !important;
-  overflow-x: hidden;
+.Container {
+  display: contents;
+  overflow-x: hidden !important;
+  flex-direction: column;
 }
 .tablet-pattern {
   position: absolute;
   top: -55px;
   z-index: -1;
-  right: 0px;
-  width: 350px;
+  right: 20px;
+  width: 320px;
 }
 .menu {
   display: none;
@@ -33,11 +34,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px;
+  padding: 80px;
   flex-direction: row;
 }
 .bringTextCo {
   width: 350px;
+  display: flex;
+  justify-content: center;
 }
 .bringText {
   font-size: 50px;
@@ -55,7 +58,7 @@
   cursor: pointer;
 }
 .manageSection {
-  display: flex !important;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 60px;
@@ -111,7 +114,7 @@
   width: 450px;
   position: absolute;
   z-index: -1;
-  left: -200px;
+  left: -100px;
 }
 .Num {
   max-width: 50px;
@@ -148,9 +151,9 @@
   font-family: "BoldFont";
 }
 .commentsSection {
-  display: flex;
+  display: contents;
   flex-direction: column;
-  margin-top: 180px;
+  margin-top: 280px;
 }
 .commentsList {
   display: flex;
@@ -162,9 +165,9 @@
   text-align: center;
 }
 .commentContainer {
-  width: 420px;
+  width: 350px;
   height: 180px;
-  background-color: #eee;
+  background-color: #000;
   display: flex;
   margin-right: 10px;
   margin-top: 30px;
@@ -350,17 +353,17 @@
   p {
     text-align: right;
   }
-  .container {
+  .Container {
     display: flex;
-    overflow-x: hidden;
-    flex-direction: column;
+    overflow-x: hidden !important;
+    padding: 0px;
   }
   .logo {
     width: 90px;
-    margin-right: 15px;
+    margin-left: 15px;
   }
   .tablet-pattern {
-    right: -90px;
+    right: 0px;
   }
   .menu {
     top: 60px;
@@ -407,7 +410,7 @@
     width: 350px;
     position: absolute;
     z-index: -1;
-    right: -300px;
+    right: -100px;
     top: 150px;
   }
   .Num {
@@ -437,12 +440,11 @@
   }
   .simplifySection {
     height: 280px;
-    flex-wrap: wrap;
+    flex-direction: column;
     display: flex;
     justify-content: center;
     padding-right: 0px;
     padding-left: 0px;
-    padding-bottom: 20px;
   }
   .simplifyTxt {
     width: 320px;
@@ -521,6 +523,18 @@
     margin-top: 50px;
   }
   .commentContainer {
+    width: 200px;
     margin-bottom: 15px;
+    margin-right: 0px;
+  }
+  .tipsContainer {
+    width: 300px;
+    display: contents;
+  }
+  .manageTextContainer {
+    width: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
   }
 }
